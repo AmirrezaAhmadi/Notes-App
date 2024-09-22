@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+}
+
+.app-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    padding: 25px;
+    margin: 20px;
+}
+
+.notes-section {
+    text-align: center;
+}
+
+h1 {
+    color: #006064;
+    font-size: 2em;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+textarea {
+    padding: 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #b2ebf2;
+    outline: none;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #00acc1;
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+#notesContainer {
+    margin-top: 25px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+#notesList {
+    list-style: none;
+    padding: 0;
+}
+
+.note {
+    background-color: #e0f2f1;
+    border: 1px solid #b2dfdb;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.note p {
+    margin: 0;
+    word-wrap: break-word;
+    width: 80%;
+    font-size: 1rem;
+    color: #004d40;
+}
+
+.deleteBtn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.deleteBtn:hover {
+    background-color: #b71c1c;
+}
+
+#notesContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+#notesContainer::-webkit-scrollbar-thumb {
+    background-color: #00796b;
+    border-radius: 10px;
+}
+
+#notesContainer::-webkit-scrollbar-thumb:hover {
+    background-color: #004d40;
+}
